@@ -5,6 +5,10 @@ data:extend(
     name = "droids"
   },
   {
+    type = "recipe-category",
+    name = "marines"
+  },
+  {
     type = "item-group",
     name = "droids",
     order = "dr",
@@ -220,7 +224,19 @@ data:extend(
     place_result = "droid-assembling-machine",
     stack_size = 50
   },
-	{
+    {
+        type = "item",
+        name = "marine-barracks",
+        icon_size = 32,
+        icon = "__robotarmy__/graphics/icons/barracks.png",
+        flags = {"goes-to-quickbar"},
+        subgroup = "robotArmyBuildings",
+        order = "b[marine-barracks]",
+        place_result = "marine-barracks",
+        stack_size = 50
+    },
+
+    {
 	type = "item",
 	name = "droid-guard-station",
     icon_size = 32,

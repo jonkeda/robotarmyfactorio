@@ -86,7 +86,19 @@ data:extend(
     },
     result = "droid-assembling-machine"
   },
-  {
+    {
+        type = "recipe",
+        name = "marine-barracks",
+        enabled = false,
+        ingredients =
+        {
+            {"raw-wood", 10},
+            {"iron-plate", 20},
+        },
+        result = "marine-barracks"
+    },
+
+    {
     type = "recipe",
     name = "droid-guard-station",
     enabled = false,
@@ -329,7 +341,9 @@ data:extend(
 
   
  -- deal with unlocking the recipes just piggy-backing on military research for now. most droids need more advanced research to build them anyway.
+table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="marine-barracks"})
 table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="basic-marine"})
+table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="basic-marine-deploy"})
 
 table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-rifle"})
 table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-rifle-deploy"})

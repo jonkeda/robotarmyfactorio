@@ -384,7 +384,7 @@ end
 function handleOnBuiltEntity(event)
     local entity = event.created_entity
 
-    if(entity.name == "droid-assembling-machine") then
+    if(entity.name == "droid-assembling-machine") or (entity.name == "marine-barracks") then
         handleDroidAssemblerPlaced(event)
     elseif(entity.name == "droid-guard-station") then
         handleGuardStationPlaced(event)
@@ -404,7 +404,7 @@ end -- handleOnBuiltEntity
 
 function handleOnRobotBuiltEntity(event)
     local entity = event.created_entity
-    if(entity.name == "droid-assembling-machine") then
+    if(entity.name == "droid-assembling-machine") or (entity.name == "marine-barracks") then
         handleDroidAssemblerPlaced(event)
     elseif(entity.name == "droid-guard-station") then
         handleGuardStationPlaced(event)

@@ -59,7 +59,7 @@ local basic_marine = {
     sticker_box = {{-0.8, -0.8}, {0.8, 0.8}},
     vision_distance = 30,
     movement_speed = 0.1,
-    minable = {hardness = 0.2, mining_time = 0.5},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "basic-marine"},
     pollution_to_join_attack = 0.0,
     distraction_cooldown = 0,
     distance_per_frame = 0.04,
@@ -254,8 +254,6 @@ data:extend({
         energy_required = 10,
         ingredients =
         {
-            {"copper-plate", 3},
-            {"electronic-circuit", 3},
             {"submachine-gun", 1},
             {"light-armor", 1}
         },
@@ -265,8 +263,8 @@ data:extend({
     {
         type = "recipe",
         name = "basic-marine-deploy",
-        enabled = false,
-        category = "droids",
+        enabled = true,
+        category = "marines",
         subgroup = "robotArmyDummy",
         energy_required = 6,
         ingredients =
