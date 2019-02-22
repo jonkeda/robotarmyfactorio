@@ -11,6 +11,7 @@ require("prototypes.destroyer-unit")
 require("prototypes.distractor-unit")
 require("prototypes.defender-unit")
 
+require("prototypes.marines")
 
 --require("prototypes.DroidUnitList")
 

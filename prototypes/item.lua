@@ -13,13 +13,32 @@ data:extend(
     icon = "__base__/graphics/item-group/military.png"
   },
   {
+    type = "item-subgroup",
+    name = "robotArmyBuildings",
+    group = "combat",
+    order = "g"
+  },
+    {
+        type = "item-subgroup",
+        name = "robotArmyDroid",
+        group = "combat",
+        order = "i"
+    },
+    {
+        type = "item-subgroup",
+        name = "robotArmyDummy",
+        group = "combat",
+        order = "i"
+    },
+
+  {
     type = "item",
     name = "droid-smg",
     icon_size = 32,
     icon = "__robotarmy__/graphics/icons/droid_smg_undep.png",
     flags = {"goes-to-quickbar"},
     order = "z[droid]",
-	subgroup = "capsule",
+	subgroup = "robotArmyDroid",
     place_result = "droid-smg",
     stack_size = 25
   },
@@ -30,7 +49,7 @@ data:extend(
     icon = "__robotarmy__/graphics/icons/droid_smg.png",
     flags = {"hidden"},
     order = "z-z",
-	subgroup = "capsule",
+	subgroup = "robotArmyDummy",
     place_result = "",
     stack_size = 1  
   },
@@ -41,7 +60,7 @@ data:extend(
     icon = "__robotarmy__/graphics/icons/droid_flame_undep.png",
     flags = {"goes-to-quickbar"},
     order = "z[droid]",
-	subgroup = "capsule",
+	subgroup = "robotArmyDroid",
     place_result = "droid-flame",
     stack_size = 25
   },
@@ -52,7 +71,7 @@ data:extend(
     icon = "__robotarmy__/graphics/icons/droid_flame.png",
     flags = {"hidden"},
     order = "z-z",
-	subgroup = "capsule",
+	subgroup = "robotArmyDummy",
     place_result = "",
     stack_size = 1  
   },
@@ -63,7 +82,7 @@ data:extend(
     icon = "__robotarmy__/graphics/icons/droid_rifle_undep.png",
     flags = {"goes-to-quickbar"},
     order = "z[droid]",
-	subgroup = "capsule",
+	subgroup = "robotArmyDroid",
     place_result = "droid-rifle",
     stack_size = 25
   },
@@ -74,7 +93,7 @@ data:extend(
     icon = "__robotarmy__/graphics/icons/droid_rifle.png",
     flags = {"hidden"},
     order = "z-z",
-	subgroup = "capsule",
+	subgroup = "robotArmyDummy",
     place_result = "",
     stack_size = 1  
   },
@@ -85,7 +104,7 @@ data:extend(
     icon = "__robotarmy__/graphics/icons/droid_rocket_undep.png",
     flags = {"goes-to-quickbar"},
     order = "z[droid]",
-	subgroup = "capsule",
+	subgroup = "robotArmyDroid",
     place_result = "droid-rocket",
     stack_size = 25
   },
@@ -96,7 +115,7 @@ data:extend(
     icon = "__robotarmy__/graphics/icons/droid_rocket.png",
     flags = {"hidden"},
     order = "z-z",
-	subgroup = "capsule",
+	subgroup = "robotArmyDummy",
     place_result = "",
     stack_size = 1  
   },
@@ -107,7 +126,7 @@ data:extend(
     icon = "__robotarmy__/graphics/icons/terminator_undep.png",
     flags = {"goes-to-quickbar"},
     order = "z[droid]",
-	subgroup = "capsule",
+	subgroup = "robotArmyDroid",
     place_result = "terminator",
     stack_size = 25
   },
@@ -118,7 +137,7 @@ data:extend(
 	icon = "__robotarmy__/graphics/icons/terminator.png",
 	flags = {"hidden"},
 	order = "z-z",
-	subgroup = "capsule",
+	subgroup = "robotArmyDummy",
 	place_result = "",
 	stack_size = 1  
 	},
@@ -130,7 +149,7 @@ data:extend(
 		icon = "__robotarmy__/graphics/icons/defender_unit_undep.png",
 		flags = {"goes-to-quickbar"},
 		order = "x[combatrobot]",
-		subgroup = "capsule",
+		subgroup = "robotArmyDroid",
 		place_result = "defender-unit",
 		stack_size = 25
 	},
@@ -141,7 +160,7 @@ data:extend(
 		icon = "__robotarmy__/graphics/icons/defender.png",
 		flags = {"hidden"},
 		order = "z-z",
-		subgroup = "capsule",
+		subgroup = "robotArmyDummy",
 		place_result = "",
 		stack_size = 1  
 	},
@@ -153,7 +172,7 @@ data:extend(
 		icon = "__robotarmy__/graphics/icons/distractor_unit_undep.png",
 		flags = {"goes-to-quickbar"},
 		order = "y[combatrobot]",
-		subgroup = "capsule",
+		subgroup = "robotArmyDroid",
 		place_result = "distractor-unit",
 		stack_size = 25
 	},
@@ -164,7 +183,7 @@ data:extend(
 		icon = "__robotarmy__/graphics/icons/distractor.png",
 		flags = {"hidden"},
 		order = "z-z",
-		subgroup = "capsule",
+		subgroup = "robotArmyDummy",
 		place_result = "",
 		stack_size = 1  
 	},
@@ -175,7 +194,7 @@ data:extend(
 		icon = "__robotarmy__/graphics/icons/destroyer_unit_undep.png",
 		flags = {"goes-to-quickbar"},
 		order = "z[combatrobot]",
-		subgroup = "capsule",
+		subgroup = "robotArmyDroid",
 		place_result = "destroyer-unit",
 		stack_size = 25
 	},
@@ -186,7 +205,7 @@ data:extend(
 		icon = "__robotarmy__/graphics/icons/destroyer.png",
 		flags = {"hidden"},
 		order = "z-z",
-		subgroup = "capsule",
+		subgroup = "robotArmyDummy",
 		place_result = "",
 		stack_size = 1  
 	},
@@ -196,7 +215,7 @@ data:extend(
     icon_size = 32,
     icon = "__robotarmy__/graphics/icons/droid-assembling-machine.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "production-machine",
+    subgroup = "robotArmyBuildings",
     order = "b[droid-assembling-machine]",
     place_result = "droid-assembling-machine",
     stack_size = 50
@@ -207,7 +226,7 @@ data:extend(
     icon_size = 32,
     icon = "__robotarmy__/graphics/icons/droid-guard-station.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "production-machine",
+    subgroup = "robotArmyBuildings",
     order = "b[droid-guard-station]",
     place_result = "droid-guard-station",
     stack_size = 50
@@ -251,7 +270,7 @@ data:extend(
     icon_size = 32,
     icon = "__robotarmy__/graphics/icons/patrol-pole.png",
     flags = {"goes-to-quickbar"},
-    subgroup = "capsule",
+    subgroup = "robotArmyBuildings",
     place_result="patrol-pole",
     order = "a[items]-d[patrol-pole]",
     stack_size = 50,
@@ -263,7 +282,7 @@ data:extend(
     icon_size = 32,
 	icon = "__robotarmy__/graphics/icons/selection_tool.png",
 	flags = {"goes-to-quickbar"},
-	subgroup = "tool",
+	subgroup = "robotArmyBuildings",
 	order = "d[droid-control]-s[selection]",
 	stack_size = 1,
 	stackable = false,
@@ -281,7 +300,7 @@ data:extend(
     icon_size = 32,
 	icon = "__robotarmy__/graphics/icons/pickup_tool.png",
 	flags = {"goes-to-quickbar"},
-	subgroup = "tool",
+	subgroup = "robotArmyBuildings",
 	order = "d[droid-control]-p[pickup]",
 	stack_size = 1,
 	stackable = false,

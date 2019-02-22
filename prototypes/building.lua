@@ -217,4 +217,4 @@ local patrolPole = {
 } 
  
  
- data:extend({droidAssembler,guardStation, patrolPole})
+ data:extend({droidAssembler,guardStation, patrolPole })
