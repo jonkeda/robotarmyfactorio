@@ -327,5 +327,4 @@ data:extend(
 	selection_cursor_box_type = "not-allowed",
 	alt_selection_cursor_box_type = "not-allowed"
 	},
-  
 })

@@ -3,24 +3,6 @@ unit_scale = 1.0
 unit_tint =  {r=0.8, g=0.2, b=0.2, a=1}
 unitMapColour = {r = .05, g = .70, b = .29}
 
-
-function make_light_gunshot_sounds(volume)
-    return
-    {
-        {
-            filename = "__base__/sound/fight/light-gunshot-1.ogg",
-            volume = 0.7
-        },
-        {
-            filename = "__base__/sound/fight/light-gunshot-2.ogg",
-            volume = 0.7
-        },
-        {
-            filename = "__base__/sound/fight/light-gunshot-3.ogg",
-            volume = 0.7
-        }
-    }
-end
 local function make_heavy_shot_sounds(volume)
     return {
         {
@@ -45,7 +27,7 @@ end
 
 local basic_marine = {
     type = "unit",
-    name = "basic-marine",
+    name = "heavy-marine",
     icon = "__robotarmy__/graphics/icons/marine.png",
     icon_size = 64,
     flags = {"breaths-air", "placeable-player", "player-creation","placeable-enemy", "placeable-off-grid"},
@@ -59,7 +41,7 @@ local basic_marine = {
     sticker_box = {{-0.8, -0.8}, {0.8, 0.8}},
     vision_distance = 30,
     movement_speed = 0.1,
-    minable = {hardness = 0.2, mining_time = 0.5, result = "basic-marine"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "heavy-marine"},
     pollution_to_join_attack = 0.0,
     distraction_cooldown = 0,
     distance_per_frame = 0.04,
@@ -144,7 +126,7 @@ local basic_marine = {
                         },
                         {
                             type = "damage",
-                            damage = { amount = 25 , type = "physical"}
+                            damage = { amount = 75 , type = "physical"}
                         }
                     }
                 }
@@ -156,19 +138,19 @@ local basic_marine = {
         layers =
         {
             {
-                filename = "__base__/graphics/entity/player/level1_running_gun.png",
-                width = 56,
-                height = 68,
-                shift = util.by_pixel(3.0,-20.0),
+                filename = "__base__/graphics/entity/player/level3addon_running_gun.png",
+                width = 38,
+                height = 48,
+                shift = util.by_pixel(0.0,-25.0),
                 frame_count = 22,
                 direction_count = 18,
                 animation_speed = 0.6,
                 hr_version =
                 {
-                    filename = "__base__/graphics/entity/player/hr-level1_running_gun.png",
-                    width = 108,
-                    height = 136,
-                    shift = util.by_pixel(2.5,-19.5),
+                    filename = "__base__/graphics/entity/player/hr-level3addon_running_gun.png",
+                    width = 76,
+                    height = 96,
+                    shift = util.by_pixel(0.5,-24.5),
                     frame_count = 22,
                     direction_count = 18,
                     animation_speed = 0.6,
@@ -176,26 +158,24 @@ local basic_marine = {
                 }
             },
             {
-                filename = "__base__/graphics/entity/player/level1_running_gun_mask.png",
-                width = 34,
-                height = 50,
-                shift = util.by_pixel(1.0,-23.0),
+                filename = "__base__/graphics/entity/player/level3addon_running_gun_mask.png",
+                width = 38,
+                height = 38,
+                shift = util.by_pixel(1.0,-29.0),
                 frame_count = 22,
                 direction_count = 18,
                 animation_speed = 0.6,
                 apply_runtime_tint = true,
-                tint = unit_tint,
                 hr_version =
                 {
-                    filename = "__base__/graphics/entity/player/hr-level1_running_gun_mask.png",
-                    width = 66,
-                    height = 100,
-                    shift = util.by_pixel(1.0,-23.0),
+                    filename = "__base__/graphics/entity/player/hr-level3addon_running_gun_mask.png",
+                    width = 74,
+                    height = 74,
+                    shift = util.by_pixel(0.5,-29.5),
                     frame_count = 22,
                     direction_count = 18,
                     animation_speed = 0.6,
                     apply_runtime_tint = true,
-                    tint = unit_tint,
                     scale = 0.5
                 }
             },
@@ -231,38 +211,32 @@ data:extend( { basic_marine } )
 
 data:extend({
     {
-        type = "item-subgroup",
-        name = "marines",
-        group = "combat",
-        order = "h"
-    },
-    {
         type = "item",
-        name = "basic-marine",
+        name = "heavy-marine",
         icon = "__robotarmy__/graphics/icons/marine.png",
         icon_size = 64,
         flags = {"goes-to-quickbar"},
         order = "z[marine]",
         subgroup = "marines",
-        place_result = "basic-marine",
+        place_result = "heavy-marine",
         stack_size = 25
     },
     {
         type = "recipe",
-        name = "basic-marine",
+        name = "heavy-marine",
         enabled = false,
         energy_required = 10,
         ingredients =
         {
             {"submachine-gun", 1},
-            {"light-armor", 1}
+            {"power-armor", 1}
         },
-        result = "basic-marine"
+        result = "heavy-marine"
     },
 
     {
         type = "recipe",
-        name = "basic-marine-deploy",
+        name = "heavy-marine-deploy",
         icon_size = 64,
         icon = "__robotarmy__/graphics/icons/marine-deploy.png",
         enabled = true,
@@ -272,9 +246,10 @@ data:extend({
         main_product = "",
         ingredients =
         {
-            {"basic-marine", 1},
+            {"heavy-marine", 1}
+
         },
-        result = "basic-marine"
+        result = "heavy-marine"
     },
 })
 

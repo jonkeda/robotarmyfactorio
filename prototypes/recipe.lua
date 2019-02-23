@@ -64,6 +64,9 @@ data:extend(
     {
     type = "recipe",
     name = "terminator-deploy",
+    subgroup = "robotArmyDummy",
+    icon_size = 32,
+    icon = "__robotarmy__/graphics/icons/terminator.png",
     enabled = false,
 	category = "droids",
     energy_required = 10,
@@ -71,7 +74,8 @@ data:extend(
     {
       {"terminator", 1}
     },
-    result = "terminator-dummy"
+    main_product = "",
+    result = "terminator"
   },
   {
     type = "recipe",
@@ -114,6 +118,9 @@ data:extend(
   {
     type = "recipe",
     name = "droid-smg-deploy",
+    subgroup = "robotArmyDummy",
+    icon_size = 32,
+    icon = "__robotarmy__/graphics/icons/droid_smg.png",
     enabled = false,
 	category = "droids",
     energy_required = 6,
@@ -122,11 +129,15 @@ data:extend(
       {"droid-smg", 1}
       
     },
-    result = "droid-smg-dummy"
+    main_product = "",
+    result = "droid-smg"
   },
   {
     type = "recipe",
     name = "droid-rocket-deploy",
+    subgroup = "robotArmyDummy",
+    icon_size = 32,
+    icon = "__robotarmy__/graphics/icons/droid_rocket.png",
     enabled = false,
 	category = "droids",
     energy_required = 6,
@@ -135,11 +146,15 @@ data:extend(
       {"droid-rocket", 1}
       
     },
-    result = "droid-rocket-dummy"
+    main_product = "",
+      result = "droid-rocket"
   }, 
   {
     type = "recipe",
     name = "droid-rifle-deploy",
+    subgroup = "robotArmyDummy",
+    icon_size = 32,
+    icon = "__robotarmy__/graphics/icons/droid_rifle.png",
     enabled = false,
 	category = "droids",
     energy_required = 3,
@@ -148,11 +163,13 @@ data:extend(
       {"droid-rifle", 1}
       
     },
-    result = "droid-rifle-dummy"
+      main_product = "",
+    result = "droid-rifle"
   },   
  {
     type = "recipe",
     name = "droid-counter",
+
     enabled = false,
     ingredients =
     {
@@ -229,14 +246,18 @@ data:extend(
   {  
     type = "recipe",
     name = "droid-flame-deploy",
+    subgroup = "robotArmyDummy",
+    icon_size = 32,
+    icon = "__robotarmy__/graphics/icons/droid_flame.png",
     enabled = false,
 	category = "droids",
     energy_required = 8,
 	ingredients =
 	{
 	  {"droid-flame",1}
-	},	
-    result = "droid-flame-dummy",
+	},
+      main_product = "",
+    result = "droid-flame",
 
   },
   {  
@@ -269,6 +290,9 @@ data:extend(
 	{
 		type = "recipe",
 		name = "defender-unit-deploy",
+        subgroup = "robotArmyDummy",
+        icon_size = 32,
+        icon = "__robotarmy__/graphics/icons/defender.png",
 		enabled = false,
 		category = "droids",
         energy_required = 3,
@@ -277,7 +301,8 @@ data:extend(
 		  {"defender-unit", 1}
 		  
 		},
-		result = "defender-unit-dummy"
+        main_product = "",
+		result = "defender-unit"
 	}, 
 	
   	{
@@ -297,6 +322,9 @@ data:extend(
 	{
 		type = "recipe",
 		name = "distractor-unit-deploy",
+        subgroup = "robotArmyDummy",
+        icon_size = 32,
+        icon = "__robotarmy__/graphics/icons/distractor.png",
         energy_required = 3,
 		enabled = false,
 		category = "droids",
@@ -305,7 +333,8 @@ data:extend(
 		  {"distractor-unit", 1}
 		  
 		},
-		result = "distractor-unit-dummy"
+        main_product = "",
+		result = "distractor-unit"
 	},
 	
 	{
@@ -325,6 +354,9 @@ data:extend(
 	{
 		type = "recipe",
 		name = "destroyer-unit-deploy",
+        subgroup = "robotArmyDummy",
+        icon_size = 32,
+        icon = "__robotarmy__/graphics/icons/destroyer.png",
         energy_required = 8,
 		enabled = false,
 		category = "droids",
@@ -333,7 +365,8 @@ data:extend(
 		  {"destroyer-unit", 1}
 		  
 		},
-		result = "destroyer-unit-dummy"
+        main_product = "",
+		result = "destroyer-unit"
 	},
   
 })
@@ -341,40 +374,41 @@ data:extend(
 
   
  -- deal with unlocking the recipes just piggy-backing on military research for now. most droids need more advanced research to build them anyway.
-table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="marine-barracks"})
-table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="basic-marine"})
-table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="basic-marine-deploy"})
-
-table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-rifle"})
-table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-rifle-deploy"})
+--table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="marine-barracks"})
+--table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="basic-marine"})
+--table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="basic-marine-deploy"})
+--
+--table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-rifle"})
+--table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-rifle-deploy"})
 
 
 if(GRAB_ARTIFACTS == 1) then
     table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="loot-chest"})
 end
-table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="patrol-pole"})
+--table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="patrol-pole"})
+
 -- DISABLED DUE TO BUGGY BEHAVIOUR table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="rally-beacon"})
-table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-assembling-machine"})
-table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-guard-station"})
-table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-selection-tool"})
-table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-pickup-tool"})
-
-table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-smg-deploy"})
-table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-smg"})
-table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-rocket-deploy"})
-table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-rocket"})
-table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-flame-deploy"})
-table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-flame"})
-
-table.insert(data.raw["technology"]["military-3"].effects,{type="unlock-recipe",recipe="terminator-deploy"})
-table.insert(data.raw["technology"]["military-3"].effects,{type="unlock-recipe",recipe="terminator"})  
+--table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-assembling-machine"})
+--table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-guard-station"})
+--table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-selection-tool"})
+--table.insert(data.raw["technology"]["military"].effects,{type="unlock-recipe",recipe="droid-pickup-tool"})
+--
+--table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-smg-deploy"})
+--table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-smg"})
+--table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-rocket-deploy"})
+--table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-rocket"})
+--table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-flame-deploy"})
+--table.insert(data.raw["technology"]["military-2"].effects,{type="unlock-recipe",recipe="droid-flame"})
+--
+--table.insert(data.raw["technology"]["military-3"].effects,{type="unlock-recipe",recipe="terminator-deploy"})
+--table.insert(data.raw["technology"]["military-3"].effects,{type="unlock-recipe",recipe="terminator"})
 
 table.insert(data.raw["technology"]["electronics"].effects,{type="unlock-recipe",recipe="droid-counter"})
 table.insert(data.raw["technology"]["electronics"].effects,{type="unlock-recipe",recipe="droid-settings"})
 
-table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="defender-unit"})
-table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="defender-unit-deploy"})
-table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="distractor-unit"})
-table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="distractor-unit-deploy"})
-table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="destroyer-unit"})
-table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="destroyer-unit-deploy"})
+--table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="defender-unit"})
+--table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="defender-unit-deploy"})
+--table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="distractor-unit"})
+--table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="distractor-unit-deploy"})
+--table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="destroyer-unit"})
+--table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="destroyer-unit-deploy"})
