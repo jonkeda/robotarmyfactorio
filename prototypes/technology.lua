@@ -83,8 +83,6 @@ data:extend({
         order = "w",
     },
 
-
-
     {
         type = "technology",
         name = "basic-droids",
