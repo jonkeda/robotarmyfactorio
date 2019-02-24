@@ -46,7 +46,7 @@ end
 local basic_marine = {
     type = "unit",
     name = "basic-marine",
-    icon = "__robotarmy__/graphics/icons/marine.png",
+    icon = "__colonistsarmy__/graphics/icons/marine.png",
     icon_size = 64,
     flags = {"breaths-air", "placeable-player", "player-creation","placeable-enemy", "placeable-off-grid"},
     subgroup="creatures",
@@ -239,7 +239,7 @@ data:extend({
     {
         type = "item",
         name = "basic-marine",
-        icon = "__robotarmy__/graphics/icons/marine.png",
+        icon = "__colonistsarmy__/graphics/icons/marine.png",
         icon_size = 64,
         flags = {"goes-to-quickbar"},
         order = "z[marine]",
@@ -264,8 +264,8 @@ data:extend({
         type = "recipe",
         name = "basic-marine-deploy",
         icon_size = 64,
-        icon = "__robotarmy__/graphics/icons/marine-deploy.png",
-        enabled = true,
+        icon = "__colonistsarmy__/graphics/icons/marine-deploy.png",
+        enabled = false,
         category = "marines",
         subgroup = "robotArmyDummy",
         energy_required = 6,

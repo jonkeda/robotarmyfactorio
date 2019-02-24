@@ -28,7 +28,7 @@ end
 local basic_marine = {
     type = "unit",
     name = "medium-marine",
-    icon = "__robotarmy__/graphics/icons/marine.png",
+    icon = "__colonistsarmy__/graphics/icons/marine.png",
     icon_size = 64,
     flags = {"breaths-air", "placeable-player", "player-creation","placeable-enemy", "placeable-off-grid"},
     subgroup="creatures",
@@ -138,44 +138,88 @@ local basic_marine = {
         layers =
         {
             {
-                filename = "__base__/graphics/entity/player/level2addon_running.png",
-                width = 36,
-                height = 54,
-                shift = util.by_pixel(0.0,-25.0),
+                filename = "__base__/graphics/entity/player/level1_running_gun.png",
+                width = 56,
+                height = 68,
+                shift = util.by_pixel(3.0,-20.0),
                 frame_count = 22,
-                direction_count = 8,
+                direction_count = 18,
                 animation_speed = 0.6,
                 hr_version =
                 {
-                    filename = "__base__/graphics/entity/player/hr-level2addon_running.png",
-                    width = 70,
-                    height = 106,
-                    shift = util.by_pixel(0.0,-25.0),
+                    filename = "__base__/graphics/entity/player/hr-level1_running_gun.png",
+                    width = 108,
+                    height = 136,
+                    shift = util.by_pixel(2.5,-19.5),
                     frame_count = 22,
-                    direction_count = 8,
+                    direction_count = 18,
                     animation_speed = 0.6,
                     scale = 0.5
                 }
             },
             {
-                filename = "__base__/graphics/entity/player/level2addon_running_mask.png",
-                width = 36,
-                height = 54,
-                shift = util.by_pixel(0.0,-25.0),
+                filename = "__base__/graphics/entity/player/level1_running_gun_mask.png",
+                width = 34,
+                height = 50,
+                shift = util.by_pixel(1.0,-23.0),
                 frame_count = 22,
-                direction_count = 8,
+                direction_count = 18,
                 animation_speed = 0.6,
                 apply_runtime_tint = true,
+                tint = unit_tint,
                 hr_version =
                 {
-                    filename = "__base__/graphics/entity/player/hr-level2addon_running_mask.png",
-                    width = 70,
-                    height = 104,
-                    shift = util.by_pixel(0.0,-25.5),
+                    filename = "__base__/graphics/entity/player/hr-level1_running_gun_mask.png",
+                    width = 66,
+                    height = 100,
+                    shift = util.by_pixel(1.0,-23.0),
                     frame_count = 22,
-                    direction_count = 8,
+                    direction_count = 18,
                     animation_speed = 0.6,
                     apply_runtime_tint = true,
+                    tint = unit_tint,
+                    scale = 0.5
+                }
+            },
+            {
+                filename = "__base__/graphics/entity/player/level2addon_running_gun.png",
+                width = 36,
+                height = 48,
+                shift = util.by_pixel(1.0,-25.0),
+                frame_count = 22,
+                direction_count = 18,
+                animation_speed = 0.6,
+                hr_version =
+                {
+                    filename = "__base__/graphics/entity/player/hr-level2addon_running_gun.png",
+                    width = 68,
+                    height = 94,
+                    shift = util.by_pixel(0.5,-25.5),
+                    frame_count = 22,
+                    direction_count = 18,
+                    animation_speed = 0.6,
+                    scale = 0.5
+                }
+            },
+            {
+                filename = "__base__/graphics/entity/player/level2addon_running_gun_mask.png",
+                width = 36,
+                height = 48,
+                shift = util.by_pixel(1.0,-25.0),
+                frame_count = 22,
+                direction_count = 18,
+                animation_speed = 0.6,
+                tint = unit_tint,
+                hr_version =
+                {
+                    filename = "__base__/graphics/entity/player/hr-level2addon_running_gun_mask.png",
+                    width = 68,
+                    height = 94,
+                    shift = util.by_pixel(0.5,-25.5),
+                    frame_count = 22,
+                    direction_count = 18,
+                    animation_speed = 0.6,
+                    tint = unit_tint,
                     scale = 0.5
                 }
             },
@@ -213,7 +257,7 @@ data:extend({
     {
         type = "item",
         name = "medium-marine",
-        icon = "__robotarmy__/graphics/icons/marine.png",
+        icon = "__colonistsarmy__/graphics/icons/marine.png",
         icon_size = 64,
         flags = {"goes-to-quickbar"},
         order = "z[marine]",
@@ -238,8 +282,8 @@ data:extend({
         type = "recipe",
         name = "medium-marine-deploy",
         icon_size = 64,
-        icon = "__robotarmy__/graphics/icons/marine-deploy.png",
-        enabled = true,
+        icon = "__colonistsarmy__/graphics/icons/marine-deploy.png",
+        enabled = false,
         category = "marines",
         subgroup = "robotArmyDummy",
         energy_required = 6,

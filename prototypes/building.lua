@@ -4,7 +4,7 @@ local droidAssembler = {
 	type = "assembling-machine",
 	name = "droid-assembling-machine",
     icon_size = 32,
-	icon = "__robotarmy__/graphics/icons/droid-assembling-machine.png",
+	icon = "__colonistsarmy__/graphics/icons/droid-assembling-machine.png",
 	flags = {"placeable-neutral", "placeable-player", "player-creation"},
 	minable = {hardness = 0.2, mining_time = 0.5, result = "droid-assembling-machine"},
 	max_health = 400,
@@ -45,7 +45,7 @@ local droidAssembler = {
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	animation =
 	{
-	  filename = "__robotarmy__/graphics/entity/droid-assembler.png",
+	  filename = "__colonistsarmy__/graphics/entity/droid-assembler.png",
 	  priority = "high",
 	  width = 111,
 	  height = 99,
@@ -92,7 +92,7 @@ local guardStation = {
 	type = "assembling-machine",
 	name = "droid-guard-station",
     icon_size = 32,
-	icon = "__robotarmy__/graphics/icons/droid-guard-station.png",
+	icon = "__colonistsarmy__/graphics/icons/droid-guard-station.png",
 	flags = {"placeable-neutral", "placeable-player", "player-creation"},
 	minable = {hardness = 0.2, mining_time = 0.5, result = "droid-guard-station"},
 	max_health = 400,
@@ -113,7 +113,7 @@ local guardStation = {
 	  selection_box = {{-2, -2}, {2, 2}},
 	animation =
 	{
-	  filename = "__robotarmy__/graphics/entity/guard-station.png",
+	  filename = "__colonistsarmy__/graphics/entity/guard-station.png",
 	  priority = "high",
 	  width = 143,
 	  height = 190,
@@ -182,7 +182,7 @@ local patrolPole = {
 	vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
 	pictures =
 	{
-	  filename = "__robotarmy__/graphics/entity/patrol-pole.png",
+	  filename = "__colonistsarmy__/graphics/entity/patrol-pole.png",
 	  priority = "high",
 	  width = 136,
 	  height = 122,
@@ -220,7 +220,7 @@ local barracks = {
 	type = "assembling-machine",
 	name = "marine-barracks",
 	icon_size = 32,
-	icon = "__robotarmy__/graphics/icons/barracks.png",
+	icon = "__colonistsarmy__/graphics/icons/barracks.png",
 	flags = {"placeable-neutral", "placeable-player", "player-creation"},
 	minable = {hardness = 0.2, mining_time = 0.5, result = "marine-barracks"},
 	max_health = 100,
@@ -245,7 +245,7 @@ local barracks = {
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	animation =
 	{
-		filename = "__robotarmy__/graphics/entity/barracks.png",
+		filename = "__colonistsarmy__/graphics/entity/barracks.png",
 		priority = "high",
 		width = 111,
 		height = 99,

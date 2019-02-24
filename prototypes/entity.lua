@@ -209,7 +209,7 @@ local droid_smg =
       sound = make_heavy_shot_sounds(1.0),
 	  animation =
 		 {
-		  filename = "__robotarmy__/graphics/entity/smg_idle.png",
+		  filename = "__colonistsarmy__/graphics/entity/smg_idle.png",
 		  priority = "high",
 		  width = 80,
 		  height = 80,
@@ -250,7 +250,7 @@ local droid_smg =
     },
 	idle =
 	{
-	  filename = "__robotarmy__/graphics/entity/smg_run.png",
+	  filename = "__colonistsarmy__/graphics/entity/smg_run.png",
 	  priority = "high",
 	  width = 80,
 	  height = 80,
@@ -262,7 +262,7 @@ local droid_smg =
 	},
 	run_animation =
 	{
-	  filename = "__robotarmy__/graphics/entity/smg_run.png",
+	  filename = "__colonistsarmy__/graphics/entity/smg_run.png",
 	  priority = "high",
 	  width = 80,
 	  height = 80,
@@ -372,7 +372,7 @@ local droid_flame =
       projectile_center = {-0.17, 0.2},
       animation =
 	  {
-			filename = "__robotarmy__/graphics/entity/flame_run.png",
+			filename = "__colonistsarmy__/graphics/entity/flame_run.png",
 			priority = "high",
 			width = 80,
 			height = 80,
@@ -433,7 +433,7 @@ local droid_flame =
     },
 	idle =
 	{
-	  filename = "__robotarmy__/graphics/entity/flame_run.png",
+	  filename = "__colonistsarmy__/graphics/entity/flame_run.png",
 	  priority = "high",
 	  width = 80,
 	  height = 80,
@@ -445,7 +445,7 @@ local droid_flame =
 	},
 	run_animation =
 	{
-	  filename = "__robotarmy__/graphics/entity/flame_run.png",
+	  filename = "__colonistsarmy__/graphics/entity/flame_run.png",
 	  priority = "high",
 	  width = 80,
 	  height = 80,
@@ -565,7 +565,7 @@ local droid_rifle =
       sound = make_rifle_gunshot_sounds(1),
 	  animation =
 		 {
-		  filename = "__robotarmy__/graphics/entity/rifle_idle.png",
+		  filename = "__colonistsarmy__/graphics/entity/rifle_idle.png",
 		  priority = "high",
 		  scale = droidscale,
 		  width = 80,
@@ -607,7 +607,7 @@ local droid_rifle =
     },
 	idle =
 	{
-	  filename = "__robotarmy__/graphics/entity/rifle_run.png",
+	  filename = "__colonistsarmy__/graphics/entity/rifle_run.png",
 	  priority = "high",
 	  width = 80,
 	  height = 80,
@@ -620,7 +620,7 @@ local droid_rifle =
 	},
 	run_animation =
 	{
-	  filename = "__robotarmy__/graphics/entity/rifle_run.png",
+	  filename = "__colonistsarmy__/graphics/entity/rifle_run.png",
 	  priority = "high",
 	  width = 80,
 	  height = 80,
@@ -731,7 +731,7 @@ local droid_rocket =
       projectile_center = {0.6, 1},
       animation =
 		 {
-			  filename = "__robotarmy__/graphics/entity/rocket_idle.png",
+			  filename = "__colonistsarmy__/graphics/entity/rocket_idle.png",
 			  priority = "high",
 			  width = 80,
 			  height = 80,
@@ -771,7 +771,7 @@ local droid_rocket =
     },
 	idle =
 	{
-	  filename = "__robotarmy__/graphics/entity/rocket_idle.png",
+	  filename = "__colonistsarmy__/graphics/entity/rocket_idle.png",
 	  priority = "high",
 	  width = 80,
 	  height = 80,
@@ -783,7 +783,7 @@ local droid_rocket =
 	},
 	run_animation =
 	{
-	  filename = "__robotarmy__/graphics/entity/rocket_run.png",
+	  filename = "__colonistsarmy__/graphics/entity/rocket_run.png",
 	  priority = "high",
 	  width = 80,
 	  height = 80,
@@ -800,7 +800,7 @@ local terminator =
 	type = "unit",
     name = "terminator",
     icon_size = 32,
-    icon = "__robotarmy__/graphics/icons/terminator.png",
+    icon = "__colonistsarmy__/graphics/icons/terminator.png",
     flags = {"placeable-player", "player-creation", "placeable-off-grid"},
     subgroup="creatures",
     order="e-a-b-d",
@@ -903,7 +903,7 @@ local terminator =
       sound = make_laser_sounds(1),
 	  animation =
 		 {
-			  filename = "__robotarmy__/graphics/entity/terminator_idle.png",
+			  filename = "__colonistsarmy__/graphics/entity/terminator_idle.png",
 			  priority = "high",
 			  width = 80,
 			  height = 80,
@@ -939,7 +939,7 @@ local terminator =
     },
 	idle =
 	{
-	  filename = "__robotarmy__/graphics/entity/terminator_run.png",
+	  filename = "__colonistsarmy__/graphics/entity/terminator_run.png",
 	  priority = "very-low",
 	  width = 80,
 	  height = 80,
@@ -950,7 +950,7 @@ local terminator =
 	},
 	run_animation =
 	{
-	  filename = "__robotarmy__/graphics/entity/terminator_run.png",
+	  filename = "__colonistsarmy__/graphics/entity/terminator_run.png",
 	  priority = "high",
 	  width = 80,
 	  height = 80,
@@ -965,7 +965,7 @@ local droid_counter =  {
     type = "constant-combinator",
     name = "droid-counter",
     icon_size = 32,
-    icon = "__robotarmy__/graphics/icons/droid-counter.png",
+    icon = "__colonistsarmy__/graphics/icons/droid-counter.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "droid-counter"},
     max_health = 50,
@@ -980,7 +980,7 @@ local droid_counter =  {
     {
       north =
       {
-        filename = "__robotarmy__/graphics/entity/droid-counter.png",
+        filename = "__colonistsarmy__/graphics/entity/droid-counter.png",
 		--x = 106,
      	width = 53,
 	    height = 44,
@@ -989,7 +989,7 @@ local droid_counter =  {
       },
       east =
       {
-        filename = "__robotarmy__/graphics/entity/droid-counter.png",
+        filename = "__colonistsarmy__/graphics/entity/droid-counter.png",
 		--x = 159,
      	width = 53,
 	    height = 44,
@@ -998,7 +998,7 @@ local droid_counter =  {
       },
       south =
       {
-        filename = "__robotarmy__/graphics/entity/droid-counter.png",
+        filename = "__colonistsarmy__/graphics/entity/droid-counter.png",
 		width = 53,
 	    height = 44,
 		frame_count = 1,
@@ -1006,7 +1006,7 @@ local droid_counter =  {
       },
       west =
       {
-        filename = "__robotarmy__/graphics/entity/droid-counter.png",
+        filename = "__colonistsarmy__/graphics/entity/droid-counter.png",
 		--x = 106,
      	width = 53,
 	    height = 44,
@@ -1160,7 +1160,7 @@ local droid_settings =  {
     type = "constant-combinator",
     name = "droid-settings",
     icon_size = 32,
-    icon = "__robotarmy__/graphics/icons/droid-settings.png",
+    icon = "__colonistsarmy__/graphics/icons/droid-settings.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "droid-settings"},
     max_health = 50,
@@ -1175,7 +1175,7 @@ local droid_settings =  {
     {
       north =
       {
-        filename = "__robotarmy__/graphics/entity/droid-settings.png",
+        filename = "__colonistsarmy__/graphics/entity/droid-settings.png",
 		--x = 106,
      	width = 53,
 	    height = 44,
@@ -1184,7 +1184,7 @@ local droid_settings =  {
       },
       east =
       {
-        filename = "__robotarmy__/graphics/entity/droid-settings.png",
+        filename = "__colonistsarmy__/graphics/entity/droid-settings.png",
 		--x = 159,
      	width = 53,
 	    height = 44,
@@ -1193,7 +1193,7 @@ local droid_settings =  {
       },
       south =
       {
-        filename = "__robotarmy__/graphics/entity/droid-settings.png",
+        filename = "__colonistsarmy__/graphics/entity/droid-settings.png",
 		width = 53,
 	    height = 44,
 		frame_count = 1,
@@ -1201,7 +1201,7 @@ local droid_settings =  {
       },
       west =
       {
-        filename = "__robotarmy__/graphics/entity/droid-settings.png",
+        filename = "__colonistsarmy__/graphics/entity/droid-settings.png",
 		--x = 106,
      	width = 53,
 	    height = 44,
@@ -1354,7 +1354,7 @@ local loot_chest = {
     type = "container",
     name = "loot-chest",
     icon_size = 34,
-    icon = "__robotarmy__/graphics/icons/loot-chest.png",
+    icon = "__colonistsarmy__/graphics/icons/loot-chest.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "loot-chest"},
     max_health = 400,
@@ -1375,7 +1375,7 @@ local loot_chest = {
     vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     picture =
     {
-      filename = "__robotarmy__/graphics/entity/loot-chest.png",
+      filename = "__colonistsarmy__/graphics/entity/loot-chest.png",
       priority = "extra-high",
       width = 48,
       height = 34,
@@ -1404,11 +1404,11 @@ local loot_chest = {
     name = "selection-sticker",
     flags = {"not-on-map"},
     icon_size = 32,
-    icon = "__robotarmy__/graphics/icons/unit-selection.png",
+    icon = "__colonistsarmy__/graphics/icons/unit-selection.png",
     flags = {},
     animation =
     {
-      filename = "__robotarmy__/graphics/icons/unit-selection.png",
+      filename = "__colonistsarmy__/graphics/icons/unit-selection.png",
       priority = "extra-high",
       width = 32,
       height = 32,

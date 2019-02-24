@@ -7,7 +7,7 @@ SQUAD_SIZE_MIN_BEFORE_HUNT = 10 -- how many droids are required in a squad befor
 SQUAD_SIZE_MIN_BEFORE_RETREAT = 2 -- if a squad has been hunting and is down to this amount of guys left, head to nearest droid assembler for backup.
 								  -- override-able from settings combinator
 SQUAD_CHECK_RANGE = 20 -- range in tiles when a droid is spawned to check for existing squad to join, else creates its own squad
-SQUAD_HUNT_RADIUS = 5000 -- range in tiles, as a radius from squad. override-able from settings combinator
+SQUAD_HUNT_RADIUS = 50 -- range in tiles, as a radius from squad. override-able from settings combinator
 AT_ASSEMBLER_RANGE = 20 -- range in tiles where we consider a droid or squad to be 'at' an assembler.
 MERGE_RANGE = 20
 
