@@ -1,11 +1,11 @@
 {
 
 	"name": "ColonistsArmy",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"title": "Colonists Army",
 	"factorio_version": "0.16",
 	"author": "Jonkeda",
 	"contact": "",
 	"homepage": "https://github.com/jonkeda/robotarmyfactorio",
-	"description": "Manufacture and deploy marines to attack your foes and defend your colonists!"
+	"description": "Train and deploy marines to attack your foes and defend your colonists!"
 }

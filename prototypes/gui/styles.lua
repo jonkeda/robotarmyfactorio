@@ -3,14 +3,14 @@ data:extend({
 	{
 		type = "sprite",
 		name = "sprite_test1",
-		filename = "__colonistsarmy__/graphics/gui/construction_bar/but-test1.png",
+		filename = "__ColonistsArmy__/graphics/gui/construction_bar/but-test1.png",
 		width = 30,
 		height = 30,
 	},
 	{
 		type = "sprite",
 		name = "sprite_test2",
-		filename = "__colonistsarmy__/graphics/gui/construction_bar/but-test2.png",
+		filename = "__ColonistsArmy__/graphics/gui/construction_bar/but-test2.png",
 		width = 30,
 		height = 30,
 	},
@@ -19,7 +19,7 @@ data:extend({
 	{
 		type="sprite",
 		name = "squad-sprite",
-		filename = "__colonistsarmy__/graphics/icons/marine.png",
+		filename = "__ColonistsArmy__/graphics/icons/marine.png",
 		priority = "extra-high",
 		width = 30,
 		height = 30
@@ -29,7 +29,7 @@ data:extend({
 	{
 		type="sprite",
 		name = "squad-attack",
-		filename = "__colonistsarmy__/graphics/gui/commands/attack.png",
+		filename = "__ColonistsArmy__/graphics/gui/commands/attack.png",
 		priority = "extra-high",
 		width = 30,
 		height = 30
@@ -39,7 +39,7 @@ data:extend({
 	{
 		type="sprite",
 		name = "squad-follow",
-		filename = "__colonistsarmy__/graphics/gui/commands/follow.png",
+		filename = "__ColonistsArmy__/graphics/gui/commands/follow.png",
 		priority = "extra-high",
 		width = 30,
 		height = 30
@@ -49,7 +49,7 @@ data:extend({
 	{
 		type="sprite",
 		name = "squad-hold",
-		filename = "__colonistsarmy__/graphics/gui/commands/hold.png",
+		filename = "__ColonistsArmy__/graphics/gui/commands/hold.png",
 		priority = "extra-high",
 		width = 30,
 		height = 30
@@ -59,7 +59,7 @@ data:extend({
 	{
 		type="sprite",
 		name = "squad-patrol",
-		filename = "__colonistsarmy__/graphics/gui/commands/patrol.png",
+		filename = "__ColonistsArmy__/graphics/gui/commands/patrol.png",
 		priority = "extra-high",
 		width = 30,
 		height = 30
@@ -69,7 +69,7 @@ data:extend({
 	{
 		type="sprite",
 		name = "squad-stop",
-		filename = "__colonistsarmy__/graphics/gui/commands/stop.png",
+		filename = "__ColonistsArmy__/graphics/gui/commands/stop.png",
 		priority = "extra-high",
 		width = 30,
 		height = 30

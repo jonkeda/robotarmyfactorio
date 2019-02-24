@@ -2,7 +2,7 @@ data:extend({
     {
         type = "technology",
         name = "basic-marines",
-        icon = "__colonistsarmy__/graphics/icons/marine.png",
+        icon = "__ColonistsArmy__/graphics/icons/marine.png",
         icon_size = 64,
         prerequisites =
         {
@@ -31,7 +31,7 @@ data:extend({
     {
         type = "technology",
         name = "medium-marines",
-        icon = "__colonistsarmy__/graphics/icons/marine.png",
+        icon = "__ColonistsArmy__/graphics/icons/marine.png",
         icon_size = 64,
         prerequisites =
         {
@@ -58,7 +58,7 @@ data:extend({
     {
         type = "technology",
         name = "heavy-marines",
-        icon = "__colonistsarmy__/graphics/icons/marine.png",
+        icon = "__ColonistsArmy__/graphics/icons/marine.png",
         icon_size = 64,
         prerequisites =
         {
@@ -86,7 +86,7 @@ data:extend({
 --    {
 --        type = "technology",
 --        name = "basic-droids",
---        icon = "__colonistsarmy__/graphics/icons/droid_smg.png",
+--        icon = "__ColonistsArmy__/graphics/icons/droid_smg.png",
 --        icon_size = 32,
 --        prerequisites =
 --        {
@@ -115,7 +115,7 @@ data:extend({
 --    {
 --        type = "technology",
 --        name = "medium-droids",
---        icon = "__colonistsarmy__/graphics/icons/droid_flame.png",
+--        icon = "__ColonistsArmy__/graphics/icons/droid_flame.png",
 --        icon_size = 32,
 --        prerequisites =
 --        {
@@ -147,7 +147,7 @@ data:extend({
 --    {
 --        type = "technology",
 --        name = "heavy-droids",
---        icon = "__colonistsarmy__/graphics/icons/terminator.png",
+--        icon = "__ColonistsArmy__/graphics/icons/terminator.png",
 --        icon_size = 32,
 --        prerequisites =
 --        {
@@ -175,7 +175,7 @@ data:extend({
 --    {
 --        type = "technology",
 --        name = "flying-droids",
---        icon = "__colonistsarmy__/graphics/icons/distractor.png",
+--        icon = "__ColonistsArmy__/graphics/icons/distractor.png",
 --        icon_size = 32,
 --        prerequisites =
 --        {

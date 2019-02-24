@@ -28,7 +28,7 @@ local dual_laser = {
     light = {intensity = 0.7, size = 20},
     animation =
     {
-      filename = "__colonistsarmy__/graphics/entity/laser/dual-laser.png",
+      filename = "__ColonistsArmy__/graphics/entity/laser/dual-laser.png",
       tint = {r=1.0, g=0.0, b=0.0},
       frame_count = 1,
       width = 24,
