@@ -83,8 +83,6 @@ function handleManualSelectionTool(event, alt)
     local player = game.players[event.player_index]
     local area = event.area;
 
-    Game.print_all( tostring(area.left_top.x.." "..area.right_bottom.x) )
-
     -- ensure the area is non-zero
     area.left_top.x = area.left_top.x - 0.1
     area.left_top.y = area.left_top.y - 0.1
@@ -95,7 +93,7 @@ function handleManualSelectionTool(event, alt)
     if global.selected_squad and global.selected_squad[event.player_index] then
         local squad = global.Squads[player.force.name][(global.selected_squad[event.player_index])]
         if(squad) then
-
+            orderSquadToMove(squad, clickPosition)
         end
     end
 end

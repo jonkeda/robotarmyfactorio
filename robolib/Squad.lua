@@ -804,6 +804,27 @@ function orderSquadToWander(squad, position, guard)
     squad.unitGroup.start_moving()
 end
 
+function orderSquadToMove(squad, position)
+    --make sure squad is good, then set command
+
+    if (not squad) or (not squad.unitGroup) or (not squad.unitGroup.valid) then
+        return --we can't order them, if they don't exist .. catches rare bug issue #114
+    end
+
+    squad.command.type = commands.manual -- sets the squad's high level role to hunt.
+    squad.command.pos = squad.unitGroup.position
+    squad.command.dest = position
+    squad.command.distance = util.distance(position, squad.command.pos)
+
+    debugSquadOrder(squad, "*ATTACK*", position)
+    squad.unitGroup.set_command({type=defines.command.go_to_location,
+        destination=position,
+        radius=20, distraction=defines.distraction.by_anything})
+    squad.command.state_changed_since_last_command = false
+    squad.command.tick = game.tick
+    squad.unitGroup.start_moving()
+end
+
 
 function orderSquadToAttack(squad, position)
     --make sure squad is good, then set command

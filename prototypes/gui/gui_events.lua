@@ -104,17 +104,9 @@ local function on_squad_left_Click(event)
 
 end
 
---local function on_squad_right_Click(event)
---
---    Game.print_all( "right click" )
---
---end
-
-
 function guid_event_init()
 
     script.on_event(defines.events.on_gui_click, on_gui_click)
     script.on_event("squad-click-1", on_squad_left_Click)
-    -- script.on_event("squad-click-2", on_squad_right_Click)
 
 end
