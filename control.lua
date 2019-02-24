@@ -8,6 +8,8 @@ require("robolib.onload")
 require("prototypes.DroidUnitList") -- so we know what is spawnable
 require("stdlib/log/logger")
 require("stdlib/game")
+require("prototypes.gui.gui_setup")
+require("prototypes.gui.gui_events")
 
 LOGGER = Logger.new("robotarmy", "robot_army_logs", false, {log_ticks = false})
 
@@ -56,10 +58,19 @@ function init_robotarmy()
     handleForceCreated(event)
     event.force = game.forces["neutral"]
     handleForceCreated(event)
+
     LOGGER.log("Robot Army mod Init script finished...")
     game.print("Robot Army mod Init completed!")
 end
 
+function OnPlayerCreated(event)
+    local index = event.player_index
+    local player = game.players[index]
+
+    for i,player in pairs(game.players) do
+        gui_init(player)
+    end
+end
 
 script.on_init(init_robotarmy)
 
@@ -75,8 +86,12 @@ function playerAltSelectedArea(event)
 	reportSelectedUnits(event, true)
 end
 
+script.on_event(defines.events.on_player_created, OnPlayerCreated)
+
 script.on_event(defines.events.on_player_selected_area, playerSelectedArea)
 script.on_event(defines.events.on_player_alt_selected_area, playerAltSelectedArea)
 
 -- this on tick handler will get replaced on the first tick after 'live' migrations have run
 script.on_event(defines.events.on_tick, bootstrap_migration_on_first_tick)
+
+guid_event_init()

@@ -225,8 +225,20 @@ data:extend(
     result = "droid-pickup-tool",
 	requester_paste_multiplier = 1
   },
-  
-   {  
+
+    {
+        type = "recipe",
+        name = "manual-selection-tool",
+        enabled = true,
+        ingredients =
+        {
+        },
+        result = "manual-selection-tool",
+        requester_paste_multiplier = 1
+    },
+
+
+    {
     type = "recipe",
     name = "droid-flame",
     enabled = false,

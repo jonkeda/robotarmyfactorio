@@ -73,6 +73,20 @@ data:extend({
 		priority = "extra-high",
 		width = 30,
 		height = 30
-	}
+	},
+
+	{
+		type = "custom-input",
+		name = "squad-click-1",
+		key_sequence = "mouse-button-1",
+		consuming = "none"
+	},
+
+	{
+		type = "custom-input",
+		name = "squad-click-2",
+		key_sequence = "mouse-button-2",
+		consuming = "none"
+	},
 
 })

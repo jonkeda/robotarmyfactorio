@@ -1,4 +1,6 @@
 require("config.config")
+require("prototypes.gui.styles")
+
 require("prototypes.droid-animations")
 require("prototypes.item") -- any buildable or placable object/entity needs this 
 require("prototypes.building")

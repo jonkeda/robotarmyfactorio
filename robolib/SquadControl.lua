@@ -13,6 +13,9 @@ function updateSquad(squad)
         --CHECK IF SQUAD IS A GUARD SQUAD, AND CHOOSE WHICH AI FUNCTION TO CALL
         if squad.command.type == commands.guard then
             executeGuardAI(squad)
+
+        elseif squad.command.type == commands.manual then
+
         elseif not squad.rally then
             executeBattleAI(squad)
         else

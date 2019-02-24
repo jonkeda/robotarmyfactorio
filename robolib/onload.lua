@@ -31,8 +31,10 @@ function bootstrap_migration_on_first_tick(event)
         end
 
     end
-    
-    
+
+    for i,player in pairs(game.players) do
+        gui_init(player)
+    end
     -- substitute the 'normal' tick handler, and run it manually this time
     script.on_event(defines.events.on_tick, handleTick)
     handleTick(event)

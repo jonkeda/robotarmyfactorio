@@ -681,3 +681,17 @@ function containsSpawnableDroid(inv)
         return nil -- we failed to get the contents
     end
 end
+
+function findSquadByEntity(entity, player_index)
+    local player = game.players[player_index]
+    local squads = global.Squads[player.force.name]
+
+    for i, squad in pairs(squads) do
+
+        if table.contains(squad.unitGroup.members, entity) then
+            return squad
+        end
+
+    end
+    return nil
+end

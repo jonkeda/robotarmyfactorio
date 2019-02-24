@@ -13,6 +13,7 @@ commands = {
     guard = 4,      -- when set, the SQUAD_AI function should command squad to stay around
     patrol = 5,     -- when set, SQUAD_AI will deal with moving them sequentially from patrol point A to B
     hunt = 6,       -- when set, SQUAD_AI will send to nearest enemy
+    manual = 7,     -- when set, SQUAD_AI is off
 }
 
 ugFailureResponses = {
