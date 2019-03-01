@@ -96,7 +96,7 @@ data:extend(
         enabled = false,
         ingredients =
         {
-            {"raw-wood", 10},
+            {"wood", 10},
             {"iron-plate", 20},
         },
         result = "marine-barracks"
@@ -415,8 +415,9 @@ end
 --table.insert(data.raw["technology"]["military-3"].effects,{type="unlock-recipe",recipe="terminator-deploy"})
 --table.insert(data.raw["technology"]["military-3"].effects,{type="unlock-recipe",recipe="terminator"})
 
-table.insert(data.raw["technology"]["electronics"].effects,{type="unlock-recipe",recipe="droid-counter"})
-table.insert(data.raw["technology"]["electronics"].effects,{type="unlock-recipe",recipe="droid-settings"})
+-- todo
+--table.insert(data.raw["technology"]["electronics"].effects,{type="unlock-recipe",recipe="droid-counter"})
+--table.insert(data.raw["technology"]["electronics"].effects,{type="unlock-recipe",recipe="droid-settings"})
 
 --table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="defender-unit"})
 --table.insert(data.raw["technology"]["combat-robotics"].effects,{type="unlock-recipe", recipe="defender-unit-deploy"})

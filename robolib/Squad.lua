@@ -823,6 +823,9 @@ function orderSquadToMove(squad, position)
     squad.command.state_changed_since_last_command = false
     squad.command.tick = game.tick
     squad.unitGroup.start_moving()
+
+    game.print("orderSquadToMove")
+
 end
 
 

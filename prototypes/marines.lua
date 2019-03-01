@@ -241,7 +241,7 @@ data:extend({
         name = "basic-marine",
         icon = "__ColonistsArmy__/graphics/icons/marine.png",
         icon_size = 64,
-        flags = {"goes-to-quickbar"},
+
         order = "z[marine]",
         subgroup = "marines",
         place_result = "basic-marine",

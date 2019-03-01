@@ -61,10 +61,7 @@ local function setManualSelectionTool(player)
     player.cursor_stack.set_stack({name="manual-selection-tool", count=1 })
 
     local inv = player.get_inventory(defines.inventory.player_main)
-    if inv.remove( {name="manual-selection-tool", count=1 } ) ~= 1 then
-        inv = player.get_inventory(defines.inventory.player_quickbar)
-        inv.remove( {name="manual-selection-tool", count=1 } )
-    end
+    inv.remove( {name="manual-selection-tool", count=1 } )
 end
 
 local function onSelectSquad(event)
