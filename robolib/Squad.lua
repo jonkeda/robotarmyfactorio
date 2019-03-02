@@ -816,15 +816,13 @@ function orderSquadToMove(squad, position)
     squad.command.dest = position
     squad.command.distance = util.distance(position, squad.command.pos)
 
-    debugSquadOrder(squad, "*ATTACK*", position)
+    debugSquadOrder(squad, "*MOVE*", position)
     squad.unitGroup.set_command({type=defines.command.go_to_location,
         destination=position,
-        radius=20, distraction=defines.distraction.by_anything})
+        distraction=defines.distraction.by_anything})
     squad.command.state_changed_since_last_command = false
     squad.command.tick = game.tick
     squad.unitGroup.start_moving()
-
-    game.print("orderSquadToMove")
 
 end
 
