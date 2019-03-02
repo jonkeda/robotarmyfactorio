@@ -83,7 +83,64 @@ data:extend({
         order = "w",
     },
 
---    {
+    {
+        type = "technology",
+        name = "basic-car",
+        icon_size = 128,
+        icon = "__base__/graphics/technology/automobilism.png",
+        prerequisites =
+        {
+            "automobilism", "military"
+        },
+        effects =
+        {
+            {type = "unlock-recipe", recipe = "basic-car"},
+            {type = "unlock-recipe", recipe = "basic-car-deploy"},
+        },
+        unit =
+        {
+            time = 30,
+            count = 5,
+            ingredients =
+            {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1}
+            },
+        },
+        order = "w",
+    },
+
+    {
+        type = "technology",
+        name = "basic-tank",
+        icon_size = 128,
+        icon = "__base__/graphics/technology/tanks.png",
+        prerequisites =
+        {
+            "tanks", "military"
+        },
+        effects =
+        {
+            {type = "unlock-recipe", recipe = "basic-tank"},
+            {type = "unlock-recipe", recipe = "basic-tank-deploy"},
+
+        },
+        unit =
+        {
+            time = 30,
+            count = 5,
+            ingredients =
+            {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"military-science-pack", 1}
+            },
+        },
+        order = "w",
+    },
+
+    --    {
 --        type = "technology",
 --        name = "basic-droids",
 --        icon = "__ColonistsArmy__/graphics/icons/droid_smg.png",

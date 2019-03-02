@@ -18,6 +18,9 @@ require("prototypes.marines")
 require("prototypes.medium-marines")
 require("prototypes.heavy-marines")
 
+require("prototypes.basic_tank")
+require("prototypes.basic_car")
+
 --require("prototypes.DroidUnitList")
 
 
